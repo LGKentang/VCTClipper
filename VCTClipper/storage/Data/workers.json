@@ -1,0 +1,16 @@
+[
+  {
+    "uuid": "eef919ae-6d03-4fb4-b526-631969dfcc7d",
+    "name": "1",
+    "channelHandle": "Vctpacific",
+    "mediaType": "Youtube",
+    "status": "inactive"
+  },
+  {
+    "uuid": "570707b5-e66e-46c4-a152-58758b3ca33f",
+    "name": "Lofi",
+    "channelHandle": "LofiGirl",
+    "mediaType": "Youtube",
+    "status": "inactive"
+  }
+]

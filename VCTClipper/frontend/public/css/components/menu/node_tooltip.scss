@@ -1,0 +1,38 @@
+.custom-context-menu {
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.548);
+  border-radius: 4px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+  padding: 10px;
+  opacity: 0;
+  visibility: hidden;
+
+  &.visible {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  button {
+    background: none;
+    border: none;
+    padding: 8px 16px;
+    cursor: pointer;
+    outline: none;
+    color: #333;
+
+    &:hover {
+      background-color: rgba(139, 139, 139, 0.418);
+      border-radius: 4px;
+    }
+
+    &.edit-button {
+      color: #b6b6b6; /* Use your preferred color */
+    }
+
+    &.delete-button {
+      color: #E74C3C; /* Use your preferred color */
+    }
+  }
+}

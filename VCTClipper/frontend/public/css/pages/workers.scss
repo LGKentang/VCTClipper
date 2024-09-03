@@ -1,0 +1,245 @@
+.worker-header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 20px;
+  justify-content: center;
+  margin-bottom: 1.4rem;
+
+  background: rgba(255, 255, 255, 0.089);
+  backdrop-filter: blur(15px);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+
+  * {
+    margin: 0.5rem 0;
+  }
+
+  h1 {
+    margin: 0;
+  }
+}
+
+.worker-divider {
+  display: flex;
+  gap: 20px;
+  align-items: start;
+  justify-content: start;
+}
+
+.worker-ongoing {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+
+  h2 {
+    margin: 0px;
+  }
+
+  .worker-ongoing-datas {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 10px;
+    height: 300px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    padding-right: 6px;
+  }
+
+  .worker-ongoing-datas::-webkit-scrollbar {
+    width: 8px;
+
+  }
+
+  .worker-ongoing-datas::-webkit-scrollbar-thumb {
+    background-color: #888;
+    border-radius: 10px;
+  }
+
+  .worker-ongoing-datas::-webkit-scrollbar-thumb:hover {
+    background-color: #b3b3b3;
+  }
+
+  .worker-ongoing-data {
+    .worker-data-card {
+      display: flex;
+      width: 100%;
+      justify-content: space-around;
+      flex-direction: row;
+      gap: 10px;
+      margin: 0;
+      padding: 0 1rem;
+      align-items: center;
+      transition: background-color 0.3s, box-shadow 0.3s, transform 0.3s;
+  
+      > div:nth-child(1) {
+        flex: 0 0 0%;
+      }
+  
+      > div:nth-child(2) {
+        flex: 0 0 25%;
+      }
+  
+      > div:nth-child(3) {
+        flex: 0 0 50%;
+      }
+  
+      > div:nth-child(4) {
+        flex: 0 0 75%;
+      }
+
+      
+  
+      .worker-data-middle-card {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+  
+        img {
+          height: 20px;
+        }
+      }
+  
+
+    //   &:hover {
+    //     background-color: #b9b9b898; /* Light background color on hover */
+    //     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow on hover */
+    //     transform: translateY(-2px); /* Slight lift effect on hover */
+    //   }
+    }
+  }
+  
+}
+
+.worker-status {
+  display: flex;
+  flex-direction: column;
+  h2,
+  h3 {
+    margin: 0px;
+  }
+}
+
+.add-worker-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+
+  // background: linear-gradient(135deg, #80d957, #5475bbf8) !important; /* Grey gradient background */
+
+  .channel-data-overlay {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    width: 300px;
+    justify-content: start;
+    gap: 10px;
+    bottom: 50%;
+    right: -70%;
+
+    .circular-img {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+  }
+
+  button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    padding: 0.6rem 1.2rem;
+    background: #52a954;
+    color: #ffffff;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+
+    &:hover {
+      background: linear-gradient(135deg, #66bb6a, #388e3c);
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+    }
+
+    &:active {
+      background: linear-gradient(135deg, #5a8f5a, #2c6b2f);
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    }
+
+    &:focus {
+      outline: none;
+      box-shadow: 0 0 0 3px rgba(76, 175, 80, 0.5);
+    }
+  }
+}
+
+.worker-add {
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  width: 400px;
+  height: 300px;
+
+  h2 {
+    margin: 0;
+    margin-bottom: 0.9rem;
+  }
+
+  .input-field {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.6rem;
+    gap: 20px;
+
+    h3 {
+      margin: 0;
+      font-size: 1rem;
+      color: #ffffff;
+      flex: 1;
+    }
+
+    input,
+    select {
+      appearance: none;
+      padding: 12px;
+      border-radius: 5px;
+      background-color: #333;
+      color: #ffffff;
+      width: calc(100% - 20px);
+      max-width: 60%;
+      font-size: 1rem;
+      transition: border-color 0.3s ease;
+      font-family: amidone;
+      border: 2px solid transparent;
+      box-sizing: border-box;
+      &:focus {
+        border-color: #cfcfcf;
+        outline: none;
+      }
+
+      &::placeholder {
+        color: #b3b3b3;
+      }
+    }
+
+    select {
+      background-image: url("../../images/arrow.png"); /* Custom arrow image */
+      background-repeat: no-repeat;
+      background-position: right 8px center; /* Move arrow closer to the left */
+      background-size: 12px;
+    }
+  }
+}
+
+.save-worker {
+  display: flex;
+  width: 100%;
+  justify-content: end;
+  margin-top: 1.2rem;
+}

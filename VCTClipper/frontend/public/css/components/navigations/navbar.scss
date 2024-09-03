@@ -1,0 +1,98 @@
+/* Navbar.css */
+.sidebar {
+    display: flex;
+    flex-direction: row;
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 50px; /* Initial collapsed width */
+    background-color: #303030; /* Transparent background color */
+    overflow: hidden;
+    transition: width 0.3s, background-color 0.3s ease-in-out; /* Transition for width and background color */
+    display: flex;
+    flex-direction: column;
+    font-family: amidone;
+    white-space: nowrap;
+  }
+  
+  .sidebar.open {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 190px; /* Expanded width when open */
+    background-color: #323232; /* Semi-transparent background color */
+  }
+
+  .sidebar-header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    img {
+      height: 22px;
+    }
+    margin-bottom: 1rem;
+  }
+  
+  .arrow {
+    display: flex;
+    margin-top: 3px;
+    margin-right: 10px;
+    justify-content: center;
+    align-items: center;
+    height: 50px; /* Ensure height matches sidebar's initial height */
+    font-size: 1rem;
+    color: white;
+    cursor: pointer;
+    transition: transform 0.3s; /* Transition for arrow rotation */
+    z-index: 1; /* Ensure the arrow is above other content */
+  }
+  
+  .arrow.rotated {
+    transform: rotate(180deg); /* Rotate the arrow when the sidebar is open */
+  }
+  
+  .sidebar-content {
+    padding: 1rem;
+    color: white; /* Text color for content */
+    background-color: #4c4c4c00; 
+    width: 140px; 
+    height: 100%;
+    transition: opacity 0.3s, visibility 0.3s; 
+    opacity: 0;
+    visibility: hidden;
+    z-index: 0;
+  }
+  
+  .sidebar.open .sidebar-content {
+    opacity: 1;
+    visibility: visible;
+  }
+  
+  .sidebar-nav-button {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: .3rem .4rem;
+    margin: 0.5rem; // Margin between buttons
+    color: white;
+    background-color: #b8c3ce4b; // Darker background color for buttons
+    border-radius: 4px; // Rounded corners
+    font-size: 1rem;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s; // Smooth transition
+
+
+    gap: 1vw;
+  }
+  
+  .sidebar-nav-button:hover {
+    background-color: #ffc82397; // Slightly lighter background on hover
+    transform: scale(1.05); // Slightly enlarge button on hover
+  }
+  
+  .sidebar-nav-button p {
+    margin: 0; // Remove default margin
+    padding: 0; // Remove default padding
+  }

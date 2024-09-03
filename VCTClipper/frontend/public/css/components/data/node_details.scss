@@ -1,0 +1,48 @@
+.worker-ongoing-data {
+    .worker-data-card {
+      display: flex;
+      width: 100%;
+      justify-content: space-around;
+      flex-direction: row;
+      gap: 10px;
+      margin: 0;
+      padding: 0 1rem;
+      align-items: center;
+      transition: background-color 0.3s, box-shadow 0.3s, transform 0.3s;
+  
+      > div:nth-child(1) {
+        flex: 0 0 0%;
+      }
+  
+      > div:nth-child(2) {
+        flex: 0 0 25%;
+      }
+  
+      > div:nth-child(3) {
+        flex: 0 0 50%;
+      }
+  
+      > div:nth-child(4) {
+        flex: 0 0 75%;
+      }
+
+      
+  
+      .worker-data-middle-card {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+  
+        img {
+          height: 20px;
+        }
+      }
+  
+
+    //   &:hover {
+    //     background-color: #b9b9b898; /* Light background color on hover */
+    //     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow on hover */
+    //     transform: translateY(-2px); /* Slight lift effect on hover */
+    //   }
+    }
+  }
